@@ -22,7 +22,7 @@ public class Exam0200 {
 메서드에 대한 설명
 
 
-@param args 파라미어테 대한 설명
+@param args 파라미터에 대한 설명
 */
 
     public static void main(String[] args){
