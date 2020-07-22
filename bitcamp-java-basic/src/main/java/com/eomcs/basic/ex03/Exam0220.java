@@ -4,7 +4,7 @@
 //출력 명령문  System.out.println(값);
 package com.eomcs.basic.ex03;
 
-class Exam0100 {
+class Exam0220 {
     public static void main(String[] args) {
     //## 10진수에 _ 문자를 삽입하기
     System.out.println(12783406);

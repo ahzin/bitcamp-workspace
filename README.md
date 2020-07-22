@@ -155,3 +155,5 @@ com.eomcs.pms.App3 클래스 추가
     - 자바 프로젝트 빌드하기 
         ->gradle build->distributions생성(고객배포용)
     - Eclpise IDE로 프로젝트 가져오기
+
+### 8일차(2020-07-22, 수)
