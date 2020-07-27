@@ -36,6 +36,7 @@ public class App3_copy {
       endDate[i] = Date.valueOf(keyInput.nextLine());
       
       inputStatus();
+      keyInput.nextLine();
       
       System.out.print("담당자? ");
       manager[i] = keyInput.nextLine();
@@ -53,10 +54,10 @@ public class App3_copy {
     System.out.println("---------------------------");
     
     for (int i = 0; i < count; i++) {
-      System.out.printf("%s, %d, %s, %s, %s, %s\n", 
+      System.out.printf("%s, %d, %s, %s, %s\n", 
         projectTitle[i], no[i], contents[i], endDate[i].toString(),  manager[i]);
+      printStatus();
     }
-    printStatus();
   }
 
 
@@ -67,8 +68,8 @@ public class App3_copy {
     System.out.println("1: 진행중");
     System.out.println("2: 완료");
     System.out.print("> ");
-    int status = keyInput.nextInt();
-    }    
+    status = keyInput.nextLine();
+  }    
   
   static void printStatus() {
     switch (status) {
