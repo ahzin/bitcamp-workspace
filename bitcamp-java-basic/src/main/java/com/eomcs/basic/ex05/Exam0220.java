@@ -36,5 +36,9 @@ public class Exam0220 {
     // => 다음과 같이 개발자가 직접 처리해야 한다.
     double EPSILON = 0.00001;
     System.out.println(Math.abs((d1 + d2) - (x + y)) < EPSILON);
+    //Math.abs() 절댓값으로 변환 => 양수로된 결과와 비교
+    System.out.println(Math.abs(-100));
+    System.out.println(Math.abs(100));
+
   }
 }
