@@ -11,7 +11,7 @@ public class Exam0620 {
     // i 메모리의 값을 1 감소시킨다.
 
     i--;
-
+    
     System.out.println(i); // 5
 
     System.out.println(i--);

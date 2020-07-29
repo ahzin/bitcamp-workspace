@@ -24,5 +24,10 @@ public class Exam0630 {
 
     System.out.println(j);
     System.out.println(i);
+    
+    int a = 7;
+    int b = ++a;
+    System.out.println(b); //8
+    System.out.println(a); //8
   }
 }
