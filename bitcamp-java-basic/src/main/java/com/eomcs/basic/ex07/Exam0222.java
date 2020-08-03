@@ -9,6 +9,9 @@ public class Exam0222 {
   }
 
   public static void main(String[] args) {
+
+    hello("홍길동",20);
+    hello("윤봉길", (int)26.5 );
     // 파라미터의 타입, 개수, 순서가 일치해야 한다.
 
     // hello("윤봉길"); // 컴파일 오류!

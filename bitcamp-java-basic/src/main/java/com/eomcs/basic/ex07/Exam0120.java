@@ -6,12 +6,14 @@ import java.util.Scanner;
 //
 public class Exam0120 {
 
-  // 스페이스를 출력하는 코드들을 
+  // 스페이스를 출력하는 코드들을
   // 관리하기 쉽도록 별도의 블록에 모아 놓는다.
   // 그리고 그 블록에 대해 이름을 붙인다.
   // => 이렇게 정의한 블록을 "메서드(method)" 또는
   //    "함수(function)"이라 부른다.
   // => 자바는 "메서드" 이름을 주로 사용한다.
+
+  // 스페이스 출력 메서드
   public static void printSpaces(int len) {
     for (int i = 0; i < len; i++) {
       System.out.print(" ");
@@ -21,7 +23,8 @@ public class Exam0120 {
   // '*'' 문자를 출력하는 코드를 관리하기 쉽게 별도의 블록으로 빼둔다.
   // 그리고 그 블록의 이름을 붙인다.
   // 이렇게 별도로 빼둔 코드 블록에 이름을 붙인 것을 "메서드=함수"라고 부른다.
-  //
+
+  // 별 출력 메서드
   public static void printStars(int len) {
     for (int i = 0; i < len; i++) {
       System.out.print("*");
@@ -33,13 +36,18 @@ public class Exam0120 {
     System.out.print("밑변의 길이? ");
     int len = keyScan.nextInt();
 
-    for (int starLen = 1; starLen <= len; starLen += 2) {
+    for (int starLen = 1; starLen <= len; starLen += 2) { //1부터 2개씩 늘어남.
       // 명령 코드들을 기능 별로 묶어 놓고
-      // 필요할 때마다 다음과 같이 사용하면 
+      // 필요할 때마다 다음과 같이 사용하면
       // 코드를 읽기가 쉬워진다.
       printSpaces((len - starLen) / 2);
-      printStars(starLen);
-      System.out.println();
+      //입력값이 7일 경우,
+      //(7 - 1) / 2 = 3으로, 앞에 3개의 공간을 찍고 별을 한개 찍는다.
+      //(7 - 3) / 2 = 2
+      //(7 - 5) / 2 = 1
+      //(7 - 7) / 2 = 0 => 공백 없이 별찍
+      printStars(starLen); //입력값만큼 별을 찍고
+      System.out.println(); // 줄바꿈
     }
     keyScan.close();
   }

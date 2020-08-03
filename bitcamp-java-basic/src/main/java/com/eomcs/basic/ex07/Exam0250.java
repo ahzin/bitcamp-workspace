@@ -25,18 +25,61 @@ public class Exam0250 {
     for(int i=0; i<scores.length; i++) {
       sum += scores[i];
     }
-    System.out.printf("%s의 총점은 %d입니다.\n",name, sum);
+    int aver = 0;
+    if(scores.length>0) {
+      aver = sum /  scores.length;
+    }
+    System.out.printf("%s의 총점은 %d, 평균은 %d입니다.\n",name, sum, aver);
   }
+
+  static void m3(String name, int...scores) { //가변 파라미터를 배열로 받는다.
+    int sum = 0;
+    for(int i=0; i<scores.length; i++) {
+      sum += scores[i];
+    }
+    int aver = 0;
+    if(scores.length>0) {
+      aver = sum /  scores.length;
+    }
+    System.out.printf("%s의 총점은 %d, 평균은 %d입니다.\n",name, sum, aver);
+  }
+
+  //가변 파라미터는 무조건 맨 끝에 와야한다.
+  //static void m4(int...scores, String name) {
+  //}
+
+  //가변 파라미터는 여러개 선언할 수 없다.
+  //static void m5(int...scores, int...scores2) {
+  //}
+
+
+  //가변 파라미터 중간에 다른 타입의 변수가 오더라도
+  //가변 파라미터를 한개 초과하여 둘 수 없다.
+
+  static void m4(int[] scores, String[] titles, String name){
+    if(scores.length != titles.length) {
+      System.out.println("과목 수와 점수의 개수가 다릅니다.");
+      return;
+    }
+    System.out.println(name+"님 점수!");
+    for (int i= 0; i <scores.length; i++) {
+      System.out.printf("%s=%d점\n",titles[i],scores[i]);
+    }
+  }
+
 
   public static void main(String[] args) {
 
     m("홍길동",80,85,90);
     System.out.println("-------------------");
 
-
     m2("홍길동", new int[] {80,85,95,90,100});
     System.out.println("-------------------");
 
+    m3("홍길동", new int[] {});
+    System.out.println("-------------------");
+
+    m4(new int[] {100,90,80}, new String[] {"국어","영어","수학"}, "홍길동");
 
     hello(); // 이 경우 names 배열의 개수는 0이다.
     System.out.println("-------------------");

@@ -22,7 +22,6 @@ public class Exam0230 {
   }
 
   public static void main(String[] args) {
-
     // hello() 메서드를 실행하고, 그 리턴 값을 변수에 담는다.
     // => 리턴 값을 받을 변수를 준비한다.
     // => 변수에 리턴 값을 받는다.
