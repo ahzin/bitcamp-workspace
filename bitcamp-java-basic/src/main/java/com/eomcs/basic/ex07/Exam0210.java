@@ -120,7 +120,23 @@ public class Exam0210 {
     int i;
     // i = hello(); // 컴파일 오류!
 
+
+    // 2 + 3 + 7 + 4 = ?
+    int sum = 0;
+    sum = plus(2,3);
+    sum = plus(sum, 7);
+    sum = plus(sum, 4);
+    System.out.println(sum); //16
+
+    sum = plus(plus(plus(2,3),7),4);
+    System.out.println(sum); // => 중첩호출
   }
+
+  static int plus(int a, int b) {
+    return a + b;
+  }
+
+
 }
 
 // ## 메서드(method) = 함수(function)?
