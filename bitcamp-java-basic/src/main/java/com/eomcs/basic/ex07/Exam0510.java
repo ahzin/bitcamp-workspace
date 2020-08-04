@@ -8,12 +8,12 @@ public class Exam0510 {
   //실행하는 클래스는 다음과 같이 main() 메서드의 시그너쳐(signature)를 가져야한다.
   // => method signature == function prototype == 메서드 선언
   // => 파라미터의 이름은 상관 없다.
-  public static void main(String[] args) {
+  public static void main(String[] 파라미터이름) {
     //프로그램 아규먼트
     //>java Exam0510 aaaa bbb ccccc
-    System.out.println(args.length);
+    System.out.println(파라미터이름.length);
     System.out.println("-----------");
-    for(String str : args) {
+    for(String str : 파라미터이름) {
       System.out.println("["+str+"]");
     }
     //JVM 아규먼트
