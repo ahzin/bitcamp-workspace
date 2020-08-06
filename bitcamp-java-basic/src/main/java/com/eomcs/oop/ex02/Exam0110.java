@@ -1,19 +1,24 @@
 package com.eomcs.oop.ex02;
 
+import com.eomcs.oop.ex02.util.Score1;
+
 public class Exam0110 {
 
+
+
   public static void main(String[] args) {
-    String name = "홍길동";
-    int kor = 100;
-    int eng = 90;
-    int math = 87;
-    int sum = kor + eng + math;
-    float aver = sum / 3f;
+    Score1 s1 = new Score1("김갑돌", 100, 90, 80);
+    Score1 s2 = new Score1("김갑수", 100, 100, 80);
 
-    printScore(name, kor, eng, math, sum, aver);
+    printScore(s1);
+    System.out.println();
+    printScore(s2);
+
   }
 
-  static void printScore(String name, int kor, int eng, int math, int sum, float aver) {
-    System.out.printf("%s : %d, %d, %d, %d, %.1f\n", name, kor, eng, math, sum, aver);
+  static void printScore(Score1 s) {
+    System.out.printf("%s : %d %d %d %d %.1f",
+        s.name, s.kor, s.eng, s.math, s.sum, s.aver);
   }
+
 }
