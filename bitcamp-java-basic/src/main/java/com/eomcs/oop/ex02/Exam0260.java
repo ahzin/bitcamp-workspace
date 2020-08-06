@@ -6,7 +6,7 @@ public class Exam0260 {
     // 2 + 3 - 1 * 7 / 3 = 9
 
     Calculator3 c1 = new Calculator3();
-
+    //Exam0250보다 더 직관적으로 알 수 있다.
     c1.plus(2);
     c1.plus(3);
     c1.minus(1);

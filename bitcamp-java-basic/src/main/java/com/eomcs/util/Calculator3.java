@@ -5,6 +5,7 @@ package com.eomcs.util;
 public class Calculator3 {
 
   public int result = 0;
+
   public void plus(int value) {
     this.result += value;
   }
