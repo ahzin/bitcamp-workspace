@@ -1,7 +1,7 @@
 package com.eomcs.oop.ex03;
 
 public class Exam0410 {
-  static class SmartPhone{
+  static class Score{
     //생성자(constructor)란?
     //  -인스턴스를 만든 후 사용하기 전에 적절한 값으로 초기화시킬 필요가있다.
     //      제품을 만든 후에 제품을 사용하기 전에 제품이 구동되는데 문제가 없도록
@@ -23,15 +23,23 @@ public class Exam0410 {
     //이 클래스에 생성자를 정의하지 않으면 다음과 같이 기본 생성자가 추가된다.
     //public smartPhone() { }
 
+    String name;
+    int kor;
+    int eng;
+    int math;
+    int sum;
+    float average;
 
-    int voulme;
-    int bright;
-    int contrast;
 
-    void playMusic() {
-      //음악을 출력한다.
-
+    Score() {
+      System.out.println("Score()");
     }
+
+    public void compute() {
+      this.sum = this.kor + this.eng + this.math;
+      this.average = this.sum / 3f;
+    }
+
   }
   public static void main(String[] args) {
     //인스턴스를 생성할 때 반드시 호출될 생성자를 지정해야 한다.
@@ -47,13 +55,17 @@ public class Exam0410 {
     //SmartPhone obj1 = new SmartPhone(100); //int 파라미터를 가지는 생성자가 없음
 
     //다음과 같이 기본 생성자를 지정할 수 있다.
-    SmartPhone obj1 = new SmartPhone();
 
-    obj1.playMusic();
+    // 생성자를 호출하는 방법
+    // => 인스턴스를 생성하는 new 명령에서 호출할 생성자의 파라미터 값을 지정하면 된다.
+    // => 다음과 같이 파라미터 값을 주지 않으면 기본 생성자를 호출하라는 뜻이 된다.
+    Score s1 = new Score(); // 드디어 클래스 명 다음에 오는 괄호()의 의미를 알게 되었다.
 
-    System.out.println(obj1.bright);
-    System.out.println(obj1.contrast);
-    System.out.println(obj1.voulme);
+    // 생성자를 호출하지 않을 수 있는가?
+    // => 컴파일 오류!
+    //Score s2 = new Score;
+
+    Score s3 = new Score();
 
   }
 }
