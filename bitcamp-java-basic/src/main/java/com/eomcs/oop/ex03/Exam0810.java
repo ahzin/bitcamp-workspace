@@ -4,7 +4,7 @@ package com.eomcs.oop.ex03;
 public class Exam0810 {
 
   static class A {
-    int a = 100;
+    int a = 100; //변수 초기화
     int b = 200;
     int c;
 
