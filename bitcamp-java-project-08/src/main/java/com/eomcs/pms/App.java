@@ -1,10 +1,5 @@
 package com.eomcs.pms;
 
-import com.eomcs.pms.handler.MemberHandler;
-import com.eomcs.pms.handler.ProjectHandler;
-import com.eomcs.pms.handler.TaskHandler;
-import com.eomcs.util.Prompt;
-
 public class App{
 
   public static void main(String[] args) throws Exception{
