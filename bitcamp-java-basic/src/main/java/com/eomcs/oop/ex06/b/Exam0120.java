@@ -5,8 +5,11 @@ public class Exam0120 {
 
   static class Calculator {
 
-    // 파라미터의 타입이나 개수가 다르더라도 
+    // 파라미터의 타입이나 개수가 다르더라도
     // 같은 일을 하는 메서드에 대해서는 같은 이름을 갖게 한다.
+
+    // 같은 기능에 대해서 같은 이름을 사용하게 한다
+    // 프로그래밍의 일관성 유지
     static int plus(int a, int b) {
       return a + b;
     }
@@ -32,9 +35,15 @@ public class Exam0120 {
     System.out.printf("%d, %d, %.1f\n", r1, r2, r3);
 
     // 오버로딩(overloading)?
-    // => 파라미터의 형식은 다르지만 같은 기능을 수행하는 메서드에 대해 
-    //    같은 이름을 부여함으로써 프로그래밍의 일관성을 제공하기 위한 문법이다.  
+    // => 파라미터의 형식은 다르지만 같은 기능을 수행하는 메서드에 대해
+    //    같은 이름을 부여함으로써 프로그래밍의 일관성을 제공하기 위한 문법이다.
 
+
+    float r4 = Calculator.plus(35.7f, 22); //int값 강제 형변환
+    System.out.println(r4);
+
+    // float r5 = Calculator.plus(35.7, 22);
+    // 컴파일 오류 ! double값은 float값 형변환 불가
 
   }
 }
