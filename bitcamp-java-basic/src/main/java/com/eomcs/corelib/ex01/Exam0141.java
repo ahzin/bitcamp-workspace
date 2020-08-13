@@ -9,11 +9,33 @@ public class Exam0141 {
 
     @Override
     public int hashCode() {
-      //String 클래스의 hashcode() 메서드는 같은 문자열에 대해 같은 해시값을 리턴함
-      //이 기능을 이용하여 My 클래스의 인스턴스 해시값을 계산해보자
-      String str = String.format("%s,%d", this.name, this.age);
-      return str.hashCode();
+      final int prime = 31;
+      int result = 1;
+      result = prime * result + age;
+      result = prime * result + ((name == null) ? 0 : name.hashCode());
+      return result;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+      if (this == obj)
+        return true;
+      if (obj == null)
+        return false;
+      if (getClass() != obj.getClass())
+        return false;
+      My other = (My) obj;
+      if (age != other.age)
+        return false;
+      if (name == null) {
+        if (other.name != null)
+          return false;
+      } else if (!name.equals(other.name))
+        return false;
+      return true;
+    }
+
+
   }
 
   public static void main(String[] args) {
@@ -31,14 +53,16 @@ public class Exam0141 {
     obj2.name = "홍길동";
     obj2.age = 20;
 
-    System.out.println(obj1 == obj2);
-    System.out.println(obj1.equals(obj2));
+    System.out.println(obj1 == obj2); //false
+    System.out.println(obj1.equals(obj2)); //false -> .equls 오버라이딩 후, true
 
-    System.out.println(Integer.toHexString(obj1.hashCode()));
-    System.out.println(Integer.toHexString(obj2.hashCode()));
+    System.out.println(Integer.toHexString(obj1.hashCode())); //994aa0fc
+    System.out.println(Integer.toHexString(obj2.hashCode())); //994aa0fc
 
-    System.out.println(obj1);
-    System.out.println(obj2);
+
+    System.out.println(obj1); //com.eomcs.corelib.ex01.Exam0141$My@994aa0fc
+    System.out.println(obj2); //com.eomcs.corelib.ex01.Exam0141$My@994aa0fc
+
 
     // hash value?
     // - 데이터를 다른 데이터와 구분하기 위해 사용하는 특별한 정수 값이다.

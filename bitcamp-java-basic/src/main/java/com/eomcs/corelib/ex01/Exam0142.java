@@ -11,14 +11,15 @@ public class Exam0142 {
     obj2.name = "홍길동";
     obj2.age = 20;
 
-    System.out.println(obj1 == obj2);
-    System.out.println(obj1.equals(obj2));
+    System.out.println(obj1 == obj2); //false
+    System.out.println(obj1.equals(obj2)); //true
 
-    System.out.println(Integer.toHexString(obj1.hashCode()));
-    System.out.println(Integer.toHexString(obj2.hashCode()));
+    System.out.println(Integer.toHexString(obj1.hashCode())); //33a49db
+    System.out.println(Integer.toHexString(obj2.hashCode())); //33a49db
 
-    System.out.println(obj1);
-    System.out.println(obj2);
+    System.out.println(obj1); //com.eomcs.corelib.ex01.Exam0142$My@33a49db
+    System.out.println(obj2); //com.eomcs.corelib.ex01.Exam0142$My@33a49db
+
   }
 
   static class My {

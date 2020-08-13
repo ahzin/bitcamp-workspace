@@ -5,10 +5,10 @@ import java.util.HashMap;
 
 
 public class Exam0152 {
-
+  //필드
   static class MyKey {
     String contents;
-
+    //생성자
     public MyKey(String contents) {
       this.contents = contents;
     }

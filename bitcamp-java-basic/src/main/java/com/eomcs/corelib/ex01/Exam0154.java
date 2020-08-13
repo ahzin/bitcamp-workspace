@@ -33,7 +33,7 @@ public class Exam0154 {
 
     //HashMap 객체를 만들 때 key 타입으로 Integer타입으로 사용하기로 선언했기 때문에
     //다른 타입을 키로 사용할 수 없다.
-    //map.put(str, new Student("김구", 50, true));
+    //map.put(str, new Student("김구", 50, true)); 에러!
 
 
     // put(Object key, Object value)

@@ -4,6 +4,7 @@ package com.eomcs.corelib.ex01;
 public class Exam0160 {
 
   static class My {
+
   }
 
   public static void main(String[] args) {
