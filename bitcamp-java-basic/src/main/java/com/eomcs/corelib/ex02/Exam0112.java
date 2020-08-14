@@ -7,9 +7,10 @@ public class Exam0112 {
     String s1 = new String("Hello");
     String s2 = "Hello";
 
-    // 문자열 리터럴이 String 객체인지 확인해보자.
-    System.out.println(s1 instanceof String);
-    System.out.println(s2 instanceof String);
+    System.out.println(s1 instanceof String); //true
+    System.out.println(s2 instanceof String); //true
+    System.out.println(s1 == s2); //false
+
   }
 }
 
