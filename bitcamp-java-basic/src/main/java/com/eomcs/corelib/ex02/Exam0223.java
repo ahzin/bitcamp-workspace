@@ -31,8 +31,8 @@ public class Exam0223 {
 
     Integer obj2 = (Integer) obj;
 
-    System.out.println(i);
-    System.out.println(obj);
+    System.out.println(i); //100
+    System.out.println(obj); //100
   }
 }
 

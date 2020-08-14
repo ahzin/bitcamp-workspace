@@ -34,13 +34,17 @@ public class Exam0230 {
 
     // 주의!
     // -128 ~ 127 범위를 넘어가는 경우
-    // 무조건 새 객체를 만들고 캐시에 보관하지 않는다.
+    // 무조건 새 객체를 만들고 캐시에 보관하지 않는다. => Heap에 만듬 => 주소값이 다 달라진다.
     Integer obj7 = 128;
     Integer obj8 = 128;
     Integer obj9 = 128;
     System.out.println(obj7 == obj8); // false
     System.out.println(obj7 == obj9); // false
     System.out.println(obj8 == obj9); // false
+
+    //
+    //
+    System.out.println(obj7.equals(obj8)); //true
   }
 }
 

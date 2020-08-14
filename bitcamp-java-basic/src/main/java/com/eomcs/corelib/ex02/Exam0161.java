@@ -8,10 +8,10 @@ public class Exam0161 {
     // 원래의 문자열을 변경하고 싶을 때 사용하는 클래스이다.
     //
     StringBuffer buf = new StringBuffer("Hello");
-    System.out.println(buf);
+    System.out.println(buf); //Hello
 
     buf.replace(2, 4, "xxxx");// 원본을 바꾼다.
-    System.out.println(buf);
+    System.out.println(buf); //Hexxxxo
 
     // println() 메서드에 넘겨주는 파라미터 값이 String 타입이 아닐 경우,
     // println() 메서드 내부에서 해당 값에 대해 toString() 호출하여
