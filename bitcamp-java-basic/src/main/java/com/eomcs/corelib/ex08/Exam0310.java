@@ -14,13 +14,13 @@ public class Exam0310 {
     // 멀티스레드가 동시에 사용할 때 문제가 발생할 수 있다.
     // => 대신 실행 속도가 빠르다.
 
-    System.out.println(map.get(null));
-    System.out.println(map.get("s01"));
+    System.out.println(map.get(null)); //홍길동
+    System.out.println(map.get("s01")); //null
     System.out.println("--------------------------------");
 
     Hashtable table = new Hashtable();
-    // table.put(null, "홍길동"); // 실행 오류! key가 null이 될 수 없다.
-    // table.put("s02", null); // 실행 오류! value가 null이 될 수 없다.
+    //table.put(null, "홍길동"); // 실행 오류! key가 null이 될 수 없다.
+    //table.put("s02", null); // 실행 오류! value가 null이 될 수 없다.
     // 동기화 지원
 
     // 결론!

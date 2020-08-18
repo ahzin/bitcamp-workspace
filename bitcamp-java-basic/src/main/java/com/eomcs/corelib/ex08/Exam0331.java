@@ -29,6 +29,7 @@ public class Exam0331 {
 
     while (iterator.hasNext()) {
       System.out.println(iterator.next());
+      //Exception in thread "main" java.util.ConcurrentModificationException
     }
   }
 

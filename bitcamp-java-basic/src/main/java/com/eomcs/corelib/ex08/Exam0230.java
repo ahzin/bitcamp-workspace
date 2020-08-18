@@ -25,7 +25,7 @@ public class Exam0230 {
     // value 객체 목록은 Collection 에 담아서 리턴한다.
     //
     Collection values = map.values();
-    for (Object value : values) {
+    for (Object value : values) { //Member객체 toString 출력
       System.out.println(value);
     }
 

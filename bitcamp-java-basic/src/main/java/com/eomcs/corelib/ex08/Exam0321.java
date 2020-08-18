@@ -34,6 +34,7 @@ public class Exam0321 {
     // 무효한 Iterator를 사용하면 실행오류가 발생할 것이다.
     while (iterator.hasNext()) {
       System.out.println(iterator.next());
+      //Exception in thread "main" java.util.ConcurrentModificationException
     }
   }
 
