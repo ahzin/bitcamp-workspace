@@ -20,24 +20,24 @@ public class TaskHandler {
   public static void add() {
     System.out.println("[작업 등록]");
 
-    Task task = new Task();
+    Task t = new Task();
 
-    task.no = Prompt.inputInt("번호? ");
-    task.content= Prompt.inputString("내용? ");
-    task.deadline = Prompt.inputDate("마감일? ");
-    task.status= Prompt.inputString("상태?\n0: 신규\n1: 진행중\n2: 완료\n> ");
-    task.owner= Prompt.inputString("담당자? ");
+    t.no = Prompt.inputInt("번호? ");
+    t.content= Prompt.inputString("내용? ");
+    t.deadline = Prompt.inputDate("마감일? ");
+    t.status= Prompt.inputString("상태?\n0: 신규\n1: 진행중\n2: 완료\n> ");
+    t.owner= Prompt.inputString("담당자? ");
 
-    list[size++] = task;
+    list[size++] = t;
   }
 
   public static void list() {
     System.out.println("[작업 목록]");
 
     for (int i = 0; i < size; i++) {
-      Task task = list[i];
+      Task t = list[i];
       String stateLabel = null;
-      switch (task.status) {
+      switch (t.status) {
         case "1":
           stateLabel = "진행중";
           break;
@@ -49,11 +49,7 @@ public class TaskHandler {
       }
       // 번호, 작업명, 마감일, 프로젝트, 상태, 담당자
       System.out.printf("%d, %s, %s, %s, %s\n", // 출력 형식 지정
-          task.no,
-          task.content,
-          task.deadline,
-          stateLabel,
-          task.owner);
+          t.no, t.content, t.deadline, stateLabel, t.owner);
     }
   }
 
