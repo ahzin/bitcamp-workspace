@@ -1,5 +1,7 @@
 package com.eomcs.algorithm.data_structure.linkedlist;
 
+import java.lang.reflect.Array;
+
 // 1) LinkedList 클래스 정의
 // 2) 값을 담을 노드 클래스를 설계한다.
 // 3) 첫 번째 노드와 마지막 노드의 주소를 담을 필드를 추가한다.
@@ -16,8 +18,17 @@ package com.eomcs.algorithm.data_structure.linkedlist;
 //
 // 테스트2: MyLinkedListTest2
 // 11) 제네릭을 적용한다.
+// 
+// 테스트3: MyLinkedListTest3
+// 12) 파라미터로 받은 배열에 값을 채워주는 toArray(E[]) 메서드를 추가한다.
 //
-public class MyLinkedList11<E> {
+// 테스트4: MyLinkedListTest4
+// 13) Object.clone()을 오버라이딩: shallow copy
+//
+// 테스트5: MyLinkedListTest5
+// 14) Object.clone()을 오버라이딩: deep copy
+
+public class MyLinkedList14<E> implements Cloneable {
 
   // 값을 찾을 때는 첫 번째 노드부터 따라간다.
   private Node<E> first;
@@ -162,6 +173,38 @@ public class MyLinkedList11<E> {
 
   public int size() {
     return this.size;
+  }
+
+  @SuppressWarnings("unchecked")
+  public E[] toArray(E[] arr) {
+
+    if (arr.length < size) {
+      arr = (E[]) Array.newInstance(arr.getClass().getComponentType(), size);
+    }
+
+    Node<E> cursor = first;
+    for (int i = 0; i < size; i++) {
+      arr[i] = cursor.value;
+      cursor = cursor.next;
+    }
+
+    return arr;
+  }
+
+  // Object.clone()을 오버라이딩 할 때 'deep copy' 이용하여 스택 객체 복사하기
+  // => 새 연결 리스트를 만들어 원본에 보관된 값을 복사한다.
+  // => 따라서 복사본의 Node 객체는 원본의 Node 객체와 다르다. 
+  //    복사본의 상태 변경에 원본은 영향 받지 않는다.
+  //
+  @SuppressWarnings("unchecked")
+  @Override
+  public MyLinkedList14<E> clone() throws CloneNotSupportedException {
+    MyLinkedList14<E> newList = new MyLinkedList14<>();
+    Object[] values = this.toArray();
+    for (Object value : values) {
+      newList.add((E) value);
+    }
+    return newList;
   }
 }
 

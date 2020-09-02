@@ -35,7 +35,6 @@ import java.util.Arrays;
 //21) toArray()에서 배열을 복사할 때 Arrays.copyOf() 메서드를 활용해보자.
 //22) 제네릭을 적용한다.
 //23) 파라미터로 받은 배열에 값을 채워주는 toArray(E[]) 메서드를 추가한다.
-
 public class MyArrayList23<E> {
 
   private static final int DEFAULT_CAPACITY = 5;

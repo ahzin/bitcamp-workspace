@@ -36,17 +36,28 @@ public class Stack<E> extends LinkedList<E> implements Cloneable {
   }
 
   public boolean empty() {
-    return size() == 0;
+    return this.size() == 0;
   }
 
   @SuppressWarnings("unchecked")
   @Override
   public Stack<E> clone() throws CloneNotSupportedException {
+    // 새 스택을 만든다.
     Stack<E> newStack = new Stack<E>();
+
+    // 기존 스택의 값을 가져온다.
     Object[] values = this.toArray();
-    for (Object value : values) {
+
+    // 기존 스택의 값을 새 스택에 넣는다.
+    for(Object value : values) {
       newStack.push((E) value);
     }
     return newStack;
   }
 }
+
+
+
+
+
+

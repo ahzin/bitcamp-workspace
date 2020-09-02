@@ -29,7 +29,7 @@ public class MyStackTest3 {
     System.out.println("---------------------------");
   }
 
-  static void print(MyStack<?> stack) {
+  static void print(MyStack<String> stack) {
     for (int i = 0; i < stack.size(); i++) {
       System.out.print(stack.get(i) + ",");
     }

@@ -34,14 +34,15 @@ import java.util.Arrays;
 //20) ArrayList에 보관되어 있는 인스턴스 목록을 배열로 리턴하는 toArray() 메서드를 추가한다.
 //21) toArray()에서 배열을 복사할 때 Arrays.copyOf() 메서드를 활용해보자.
 //
+//테스트4 - MyArrayListTest4 : java.util.ArrayList 비교 테스트
+//
 //테스트5 - MyArrayListTest5
 //22) 제네릭을 적용한다.
 //23) 파라미터로 받은 배열에 값을 채워주는 toArray(E[]) 메서드를 추가한다.
 //
-//테스트5 - MyArrayListTest5
+//테스트6 - MyArrayListTest6
 //24) 항목의 개수보다 작은 크기의 배열을 전달할 때, 자동으로 새 배열을 만들도록 toArray(E[])를 변경한다.
 //
-
 public class MyArrayList<E> {
 
   private static final int DEFAULT_CAPACITY = 5;
@@ -158,12 +159,16 @@ public class MyArrayList<E> {
 
   @SuppressWarnings("unchecked")
   public E[] toArray(E[] arr) {
-    if(arr.length < this.size) {
-      // 파라미터로 받은 배열이 적을 때는 새 배열을 받아서 리턴
+    if (arr.length < this.size) {
+      // 파라미터로 받은 배열이 작을 때는 새 배열을 만들어 리턴.
+      // 방법1: 새 배열을 만들고 System.arraycopy()로 값을 복사한다.
+      //arr = (E[]) Array.newInstance(arr.getClass().getComponentType(), this.size);
+      
+      // 방법2: 새 배열을 만들고 값을 복사하는 것도 함께 한다.
       return (E[]) Arrays.copyOf(this.elementData, this.size, arr.getClass());
     }
     System.arraycopy(this.elementData, 0, arr, 0, this.size);
-    return arr; // 넉넉할 때는 파라미터로 받은 받은 배열을 그대로 리턴
+    return arr; // 넉넉할 때는 파라미터로 받은 배열을 그대로 리턴. 
   }
 }
 
