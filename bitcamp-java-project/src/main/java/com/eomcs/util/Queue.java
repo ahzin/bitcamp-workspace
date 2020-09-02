@@ -7,32 +7,37 @@ package com.eomcs.util;
 
 // 테스트 2 : MyQueueTest2
 // 5) Queue.Clone() 오버라이딩 deep copy
-public class Queue extends LinkedList implements Cloneable{
 
-  public boolean offer(Object e) {
+// 테스트 3 : MyQueueTest3
+// 6) 제네릭 적용
+
+public class Queue<E> extends LinkedList<E> implements Cloneable{
+
+  public boolean offer(E e) {
     return add(e);
   }
 
-  public Object poll() {
+  public E poll() {
     if (size() == 0) {
       return null;
     }
     return remove(0);
   }
 
-  public Object peek() {
+  public E peek() {
     if (size() == 0) {
       return null;
     }
     return get(0);
   }
 
+  @SuppressWarnings("unchecked")
   @Override
-  public Queue clone() throws CloneNotSupportedException {
-    Queue newQueue = new Queue();
+  public Queue<E> clone() throws CloneNotSupportedException {
+    Queue<E> newQueue = new Queue<>();
     Object[] values = this.toArray();
     for (Object value : values) {
-      newQueue.offer(value);
+      newQueue.offer((E)value);
     }
     return newQueue;
   }

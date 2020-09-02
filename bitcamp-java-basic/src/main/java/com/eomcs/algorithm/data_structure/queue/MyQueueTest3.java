@@ -21,7 +21,7 @@ public class MyQueueTest3 {
     System.out.println("--------------------------");
   }
 
-  static void print(MyQueue<String> queue) {
+  static void print(MyQueue<?> queue) {
     for (int i = 0; i < queue.size(); i++) {
       System.out.print(queue.get(i) + ",");
     }
