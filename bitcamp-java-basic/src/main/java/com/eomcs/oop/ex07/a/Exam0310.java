@@ -4,7 +4,6 @@ package com.eomcs.oop.ex07.a;
 class Score3 {
   String name;
 
-  //직접 필드값을 바꾸지 못하게 (직접 접근을 막음) private 설정
   // 국, 영, 수 점수를 바꿀 때 마다 자동으로 합계, 평균을 계산해야 한다.
   // 방법?
   // => 직접 필드의 값을 바꾸게 하지 말고 메서드를 통해 바꾸도록 유도한다.
@@ -60,9 +59,8 @@ class Score3 {
     return this.aver;
   }
 
-
-  //공개할 필요가 없는 메서드는 private로 막는다.
-  //보통 private으로 막는 메서드는 해당 클래스 내부에서만 사용되는 메서드이다.
+  // 공개할 필요가 없는 메서드는 private으로 막아라.
+  // 보통 private 으로 막는 메서드는 해당 클래스 내부에서만 사용되는 메서드이다.
   private void compute() {
     this.sum = this.kor + this.eng + this.math;
     this.aver = this.sum / 3f;
