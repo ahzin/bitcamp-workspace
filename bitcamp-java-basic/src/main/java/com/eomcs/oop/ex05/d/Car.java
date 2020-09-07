@@ -1,6 +1,7 @@
 package com.eomcs.oop.ex05.d;
-//Super(Parent) Class
+
 public class Car {
+  
   public String model;
   public String maker;
   public int capacity;

@@ -1,3 +1,4 @@
+// 인스턴스 메서드와 클래스 메서드의 활용 - Math 클래스
 package com.eomcs.oop.ex04;
 
 public class Exam0230 {
@@ -12,7 +13,7 @@ public class Exam0230 {
     // => floor() : 파라미터로 주어니 부동소수점의 바로 밑 작은 정수 값을 리턴
     System.out.println(Math.ceil(3.28)); // 4
     System.out.println(Math.floor(3.28)); // 3
-
+    
     System.out.println(Math.ceil(-3.28)); // -3
     System.out.println(Math.floor(-3.28)); // -4
 
@@ -26,3 +27,8 @@ public class Exam0230 {
 
   }
 }
+
+
+
+
+

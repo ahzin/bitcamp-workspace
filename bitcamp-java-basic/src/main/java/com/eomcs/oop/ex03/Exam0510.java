@@ -27,10 +27,6 @@ public class Exam0510 {
     //
     System.out.printf("%d, %d, %d, %d, %c, %.1f, %.1f, %b, %s, %s\n", A.b, A.s, A.i, A.l, A.c, A.f,
         A.d, A.bool, A.str, A.date);
-
-    int n;
-    //System.out.println(n); 오류! 로컬변수는 초기화 시켜야하지만,
-    //스태틱변수는 사용가능하다.
   }
 }
 

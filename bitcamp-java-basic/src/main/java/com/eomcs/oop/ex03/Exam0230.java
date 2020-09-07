@@ -1,4 +1,4 @@
-// 인스턴스와 인스턴스 변수, 인스턴스 메서드
+// 인스턴스와 인스턴스 변수, 인스턴스 메서드 
 package com.eomcs.oop.ex03;
 
 public class Exam0230 {

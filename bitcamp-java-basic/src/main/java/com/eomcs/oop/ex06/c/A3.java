@@ -1,5 +1,5 @@
 package com.eomcs.oop.ex06.c;
-//오버라이딩을 활용
+
 public class A3 extends A {
   int age;
   String tel = "A3A3A3";
@@ -24,11 +24,7 @@ public class A3 extends A {
 
 
 
-/*
- *  오버로딩 : 같은 일을 하는 메소드에 대해서 파라미터는 다르지만, 같은 이름을 부여함으로써
- *              프로그래밍의 일관성을 부여
- *  오버라이딩 : 상속받은 메소드를 서브클래스의 역할에 맞게끔 재정의 하는 것
- */
+
 
 
 

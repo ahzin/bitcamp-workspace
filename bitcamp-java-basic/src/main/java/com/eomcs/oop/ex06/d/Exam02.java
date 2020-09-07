@@ -3,14 +3,12 @@ package com.eomcs.oop.ex06.d;
 
 public class Exam02 {
   public static void main(String[] args) {
-    A a = new A3(); //y()만 있음, A2로 올라감
-    a.m(); // A2의 m() 호출
-    // a가 실제 가리키는 A3 클래스부터 상위 클래스로 따라 올라가면서
+    A a = new A3();
+    a.m(); // A2의 m() 호출 
+    // a가 실제 가리키는 A3 클래스부터 상위 클래스로 따라 올라가면서 
     // 첫 번째로 만난 m()을 호출한다.
     System.out.println("--------------------");
-    //만약, A에 public void x(){}가 있다면, 실행가능
-    // A a2 = new A3();
-    // a2.x();
+    
   }
 }
 

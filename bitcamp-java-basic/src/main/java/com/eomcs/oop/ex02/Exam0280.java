@@ -1,6 +1,6 @@
 package com.eomcs.oop.ex02;
 
-import com.eomcs.util.Calculator3;
+import com.eomcs.oop.ex02.util.Calculator;
 
 // # 관련된 기능(메서드)을 묶어 분류하기 - 패키지와 클래스
 //
@@ -17,8 +17,8 @@ public class Exam0280 {
     // 식2) 3 * 2 + 7 / 4 - 5 = ?
 
 
-    Calculator3 c1 = new Calculator3(); // 식1의 계산 결과를 보관할 메모리 준비
-    Calculator3 c2 = new Calculator3(); // 식2의 계산 결과를 보관할 메모리 준비
+    Calculator c1 = new Calculator(); // 식1의 계산 결과를 보관할 메모리 준비
+    Calculator c2 = new Calculator(); // 식2의 계산 결과를 보관할 메모리 준비
 
     // 계산을 수행할 때 계산 결과를 보관할 메모리를 메서드 호출 앞에서 전달하라!
     // - 인스턴스 메서드를 사용하면 파라미터로 메모리 주소를 전달할 필요가 없다.
