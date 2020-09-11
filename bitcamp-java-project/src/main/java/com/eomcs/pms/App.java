@@ -1,5 +1,12 @@
 package com.eomcs.pms;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import com.eomcs.pms.domain.Board;
 import com.eomcs.pms.domain.Member;
 import com.eomcs.pms.domain.Project;
@@ -8,13 +15,7 @@ import com.eomcs.pms.handler.BoardHandler;
 import com.eomcs.pms.handler.MemberHandler;
 import com.eomcs.pms.handler.ProjectHandler;
 import com.eomcs.pms.handler.TaskHandler;
-import com.eomcs.util.ArrayList;
-import com.eomcs.util.Iterator;
-import com.eomcs.util.LinkedList;
-import com.eomcs.util.List;
 import com.eomcs.util.Prompt;
-import com.eomcs.util.Queue;
-import com.eomcs.util.Stack;
 
 public class App {
 
@@ -32,8 +33,8 @@ public class App {
     List<Task> taskList = new ArrayList<>();
     TaskHandler taskHandler = new TaskHandler(taskList, memberHandler);
 
-    Stack<String> commandList = new Stack<>();
-    Queue<String> commandList2 = new Queue<>();
+    Deque<String> commandList = new ArrayDeque<>();
+    Queue<String> commandList2 = new LinkedList<>();
 
     loop:
       while (true) {
