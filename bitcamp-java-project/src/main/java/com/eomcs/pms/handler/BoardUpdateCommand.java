@@ -4,9 +4,10 @@ import java.util.List;
 import com.eomcs.pms.domain.Board;
 import com.eomcs.util.Prompt;
 
+// '/board/add' 명령을 처리할 커맨드 객체
 public class BoardUpdateCommand implements Command {
 
-  List<Board> boardList;
+  private List<Board> boardList;
 
   public BoardUpdateCommand(List<Board> list) {
     this.boardList = list;

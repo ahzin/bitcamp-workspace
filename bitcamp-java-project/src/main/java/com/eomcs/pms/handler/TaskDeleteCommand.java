@@ -12,6 +12,7 @@ public class TaskDeleteCommand implements Command {
     this.taskList = list;
   }
 
+
   @Override
   public void execute() {
     System.out.println("[작업 삭제]");

@@ -4,9 +4,10 @@ import java.util.List;
 import com.eomcs.pms.domain.Board;
 import com.eomcs.util.Prompt;
 
+// '/board/add' 명령을 처리할 커맨드 객체
 public class BoardDeleteCommand implements Command {
 
-  List<Board> boardList;
+  private List<Board> boardList;
 
   public BoardDeleteCommand(List<Board> list) {
     this.boardList = list;
@@ -31,6 +32,7 @@ public class BoardDeleteCommand implements Command {
 
     boardList.remove(index);
     System.out.println("게시글을 삭제하였습니다.");
+
   }
 
   private int indexOf(int no) {

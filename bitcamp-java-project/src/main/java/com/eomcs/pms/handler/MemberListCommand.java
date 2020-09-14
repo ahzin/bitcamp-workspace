@@ -40,5 +40,4 @@ public class MemberListCommand implements Command {
     }
     return null;
   }
-
 }
