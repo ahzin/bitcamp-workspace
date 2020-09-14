@@ -1,5 +1,8 @@
 package com.eomcs.pms;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -35,9 +38,10 @@ import com.eomcs.util.Prompt;
 
 public class App {
 
+  static List<Board> boardList = new ArrayList<>();
+
   public static void main(String[] args) {
 
-    List<Board> boardList = new ArrayList<>();
     BoardAddCommand boardAddCommand = new BoardAddCommand(boardList);
     BoardListCommand boardListCommand = new BoardListCommand(boardList);
     BoardDetailCommand boardDetailCommand = new BoardDetailCommand(boardList);
@@ -112,6 +116,8 @@ public class App {
       }
 
     Prompt.close();
+
+    saveBoards();
   }
 
   static void printCommandHistory(Iterator<String> iterator) {
@@ -130,4 +136,40 @@ public class App {
       System.out.println("history 명령 처리 중 오류 발생!");
     }
   }
+
+  static void saveBoards() {
+    System.out.println("[게시물을 저장]");
+    File file = new File("./board.csv"); //현재 폴더(.)은프로젝트 폴더를 가리킴
+    //데이터를 저장할 파일의 정보
+
+    FileWriter out = null;
+
+    try {
+      //데이터를 파일에 출력할 때 사용할 도구
+      out = new FileWriter(file);
+
+      //각각의 게시글 파일로 출력
+      for(Board board : boardList) {
+        String record= String.format("%d, %s, %s, %s, %s, %d\n",
+            board.getNo(),
+            board.getTitle(),
+            board.getContent(),
+            board.getWriter(),
+            board.getRegisteredDate().toString(),
+            board.getViewCount());
+        out.write(record);
+      }
+
+    }catch (IOException e) {
+      System.out.println("파일 출력작업 중 오류 발생");
+    } finally {
+      try {
+        out.close();
+      } catch (Exception e) {
+        //오류 발생 시 할게 없으므로 냅둔다
+      }
+    }
+  }
 }
+
+
